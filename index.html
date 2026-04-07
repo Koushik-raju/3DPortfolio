@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koushik Raju S R - Futuristic Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-circle">KR</div>
+                <div class="rotating-ring"></div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="progress-text" id="progress-text">0%</p>
+            </div>
+            <p class="loading-message">Initializing experience...</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content" style="display: none;">
+        <!-- Floating Navigation -->
+        <nav class="floating-nav" id="floating-nav">
+            <div class="nav-logo">KR</div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-background">
+                <div class="grid-pattern"></div>
+                <div class="floating-orb orb-1"></div>
+                <div class="floating-orb orb-2"></div>
+                <div class="floating-orb orb-3"></div>
+                <div id="particles-container" class="particles-container"></div>
+            </div>
+            <div class="gradient-overlay"></div>
+            
+            <div class="hero-content">
+                <p class="hero-subtitle fade-in">Welcome to the future</p>
+                <h1 class="hero-title fade-in-up">
+                    Hi, I'm <span class="gradient-text" id="hero-name">Koushik Raju S R</span>
+                </h1>
+                <p class="hero-role fade-in" id="hero-role">Software Developer | Tester | Tech Lead</p>
+                <div class="typewriter-container fade-in">
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <button class="cta-button fade-in-up" onclick="scrollToSection('about')">Enter My World</button>
+            </div>
+            
+            <div class="scroll-indicator">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-background">
+                <div class="bg-orb bg-orb-left"></div>
+                <div class="bg-orb bg-orb-right"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="flip-card-container">
+                    <div class="flip-card" id="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="profile-circle">KRSR</div>
+                                <h3 class="profile-name">Koushik Raju S R</h3>
+                                <p class="profile-title">Software Developer | Tester | Tech Lead</p>
+                                <p class="flip-hint">Click to learn more</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3 class="back-title">My Journey</h3>
+                                <p class="back-text">
+                                    A passionate BCA Graduate with expertise in software development and testing.
+                                    I specialize in building robust applications using ReactJS, managing databases,
+                                    and ensuring quality through comprehensive testing strategies.
+                                </p>
+                                <p class="back-text">
+                                    My experience spans from frontend development to cloud infrastructure on AWS,
+                                    with a proven track record of leading technical teams and delivering successful projects.
+                                </p>
+                                <p class="flip-hint">Click to go back</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card" data-animation="slide-up">
+                        <div class="stat-icon stat-icon-cyan">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3 class="stat-value">8+ Months</h3>
+                        <p class="stat-label">Experience</p>
+                    </div>
+                    <div class="stat-card" data-animation="slide-up">
+                        <div class="stat-icon stat-icon-purple">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="stat-value">3+ Projects</h3>
+                        <p class="stat-label">Projects</p>
+                    </div>
+                    <div class="stat-card" data-animation="slide-up">
+                        <div class="stat-icon stat-icon-gradient">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="stat-value">BCA Graduate</h3>
+                        <p class="stat-label">Education</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="section-background">
+                <div class="bg-orb bg-orb-left"></div>
+                <div class="bg-orb bg-orb-right"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Technical expertise and proficiency</p>
+                </div>
+
+                <div class="skills-grid" id="skills-grid"></div>
+
+                <div class="skills-legend">
+                    <div class="legend-item">
+                        <div class="legend-dot legend-cyan"></div>
+                        <span>Frontend</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot legend-purple"></div>
+                        <span>Database</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot legend-green"></div>
+                        <span>Cloud</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot legend-orange"></div>
+                        <span>Testing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-background">
+                <div class="bg-orb bg-orb-left"></div>
+                <div class="bg-orb bg-orb-right"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Showcasing my best work and innovations</p>
+                </div>
+
+                <div class="projects-grid" id="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal">
+            <div class="modal-overlay" onclick="closeModal()"></div>
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="section-background">
+                <div class="bg-orb bg-orb-left"></div>
+                <div class="bg-orb bg-orb-right"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Professional experience and accomplishments</p>
+                </div>
+
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="section-background">
+                <div class="bg-orb bg-orb-left"></div>
+                <div class="bg-orb bg-orb-right"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What I Can <span class="gradient-text">Do For You</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Delivering exceptional services to bring your ideas to life</p>
+                </div>
+
+                <div class="services-grid" id="services-grid"></div>
+
+                <div class="cta-text">
+                    <p>Let's Build Something Amazing Together</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-background">
+                <div class="bg-orb bg-orb-left"></div>
+                <div class="bg-orb bg-orb-right"></div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Let's build something amazing together</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-methods" id="contact-methods"></div>
+
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="form-message" class="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-made-with">
+                        <span>Made with</span>
+                        <svg class="heart-icon" width="16" height="16" viewBox="0 0 24 24" fill="#ef4444">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <span>by</span>
+                        <span class="gradient-text">Koushik Raju S R</span>
+                    </div>
+                    <p class="footer-copyright">&copy; 2025 All rights reserved.</p>
+                    <div class="footer-tech">
+                        <span>Powered by</span>
+                        <span class="tech-item">HTML</span>
+                        <span>•</span>
+                        <span class="tech-item">CSS</span>
+                        <span>•</span>
+                        <span class="tech-item">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="mock-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
